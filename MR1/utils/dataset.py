@@ -19,10 +19,13 @@ def Normalized(img):#标准化
     return img_normalized
 
 class Train_load(Dataset):
-    def __init__(self, data_path):
+    def __init__(self, data_path,imgs_path=None):
         # 初始化函数，读取所有data_path下的图片
         self.data_path = data_path
-        self.imgs_path = glob.glob(os.path.join(data_path, f'with_artifact/*.png'))
+        if imgs_path is None:
+            self.imgs_path = glob.glob(os.path.join(data_path, f'with_artifact/*.png'))
+        else:
+            self.imgs_path = imgs_path # 传入图片路径
         # print(os.path.join(data_path, 'image\*.png'))
 
     def augment(self, image, angle_range=20, translate_range=20, scale_range=0.1, shear_range=0.1):
@@ -88,10 +91,14 @@ class Train_load(Dataset):
         return len(self.imgs_path)
 
 class val_load(Dataset):
-    def __init__(self, data_path):
+    def __init__(self, data_path,imgs_path=None):
         # 初始化函数，读取所有data_path下的图片
         self.data_path = data_path
-        self.imgs_path = glob.glob(os.path.join(data_path, 'with_artifact/*.png'))
+        if imgs_path is None:
+            self.imgs_path = glob.glob(os.path.join(data_path, f'with_artifact/*.png'))
+        else:
+            self.imgs_path = imgs_path # 传入图片路径
+        # print(os.path.join(data_path, 'image\*.png'))
 
     def augment(self, image, flipCode):
         # 使用cv2.flip进行数据增强，filpCode为1水平翻转，0垂直翻转，-1水平+垂直翻转
@@ -141,10 +148,14 @@ class val_load(Dataset):
         return len(self.imgs_path)
 
 class test_load(Dataset):
-    def __init__(self, data_path):
+    def __init__(self, data_path,imgs_path=None):
         # 初始化函数，读取所有data_path下的图片
         self.data_path = data_path
-        self.imgs_path = glob.glob(os.path.join(data_path, 'with_artifact/*.png'))
+        if imgs_path is None:
+            self.imgs_path = glob.glob(os.path.join(data_path, f'with_artifact/*.png'))
+        else:
+            self.imgs_path = imgs_path # 传入图片路径
+        # print(os.path.join(data_path, 'image\*.png'))
 
     def normalized(self, image):
         image_normalized = np.zeros(image.shape, dtype=np.float32)

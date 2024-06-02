@@ -47,7 +47,7 @@ _C.MODEL.TYPE = 'swin'
 # Model name
 _C.MODEL.NAME = 'swin_tiny_patch4_window7_224'
 # Checkpoint to resume, could be overwritten by command line argument
-_C.MODEL.PRETRAIN_CKPT = r'D:\Graduation project\MR\swin_tiny_patch4_window7_224.pth'
+_C.MODEL.PRETRAIN_CKPT = r'/home/guoshipeng/moonlight/MR1/data1/pretrain_model/swin_tiny/swin_tiny_patch4_window7_224_22k.pth'
 _C.MODEL.RESUME = ''
 # Number of classes, overwritten in data preparation
 _C.MODEL.NUM_CLASSES = 1

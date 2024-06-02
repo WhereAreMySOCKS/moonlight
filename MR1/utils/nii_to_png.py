@@ -1,3 +1,4 @@
+import logging
 import os
 import shutil
 import numpy as np
@@ -11,6 +12,7 @@ class MRImagePreprocessor:
         self.data_with_artifact_paths = data_with_artifact_paths
         self.data_without_artifact_paths = data_without_artifact_paths
         self.image_pairs = None
+        self.nii_path = []
 
     def load_nii_data(self, file_path):
         nii_data = nib.load(file_path)
@@ -35,6 +37,7 @@ class MRImagePreprocessor:
                 with_artifact_slice = data_with_artifact_normalized[:, i, :]
                 without_artifact_slice = data_without_artifact_normalized[:, i, :]
                 self.image_pairs.append((with_artifact_slice, without_artifact_slice))
+                self.nii_path.append(with_path.split('/')[-1].replace('.nii.gz',''))
 
     def save_dataset_as_images(self, output_dir, train_test_split=0.8):
         if self.image_pairs is None:
@@ -43,8 +46,8 @@ class MRImagePreprocessor:
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        train_dir = os.path.join(output_dir, 'train')
-        test_dir = os.path.join(output_dir, 'val')
+        train_dir = os.path.join(output_dir, 'train/')
+        test_dir = os.path.join(output_dir, 'val/')
 
         if not os.path.exists(train_dir):
             os.makedirs(train_dir)
@@ -63,6 +66,7 @@ class MRImagePreprocessor:
             os.makedirs(os.path.join(test_dir, 'no_artifact'))
 
         num_train_samples = int(train_test_split * len(self.image_pairs))
+        logging.info(f"{num_train_samples} pictures processed.")
 
         for i, pair in enumerate(self.image_pairs[:num_train_samples]):
             with_artifact_img = Image.fromarray((pair[0] * 255).astype(np.uint8))
@@ -72,15 +76,24 @@ class MRImagePreprocessor:
             with_artifact_img = ImageOps.exif_transpose(with_artifact_img.rotate(90, expand=True))
             without_artifact_img = ImageOps.exif_transpose(without_artifact_img.rotate(90, expand=True))
 
-            with_artifact_img.save(os.path.join(train_dir, f'with_artifact\{i}.png'))
-            without_artifact_img.save(os.path.join(train_dir, f'no_artifact\{i}.png'))
+            # 按照数据集名称分别保存图片
+            with_artifact_img_path = train_dir + self.nii_path[i] + '/with_artifact/'
+            without_artifact_img_path = train_dir + self.nii_path[i] + '/no_artifact/'
+            if not os.path.exists(with_artifact_img_path):
+                os.makedirs(with_artifact_img_path)
+            if not os.path.exists(without_artifact_img_path):
+                os.makedirs(without_artifact_img_path)
+
+            with_artifact_img.save(with_artifact_img_path + f'{i}.png')
+            without_artifact_img.save(without_artifact_img_path + f'{i}.png')
 
         for i, pair in enumerate(self.image_pairs[num_train_samples:]):
             with_artifact_img = Image.fromarray((pair[0] * 255).astype(np.uint8))
             without_artifact_img = Image.fromarray((pair[1] * 255).astype(np.uint8))
 
-            with_artifact_img.save(os.path.join(test_dir, f'with_artifact\{i}.png'))
-            without_artifact_img.save(os.path.join(test_dir, f'no_artifact\{i}.png'))
+            with_artifact_img.save(os.path.join(test_dir, f'with_artifact/{i}.png'))
+            without_artifact_img.save(os.path.join(test_dir, f'no_artifact/{i}.png'))
+
     def get_dataset(self):
         if self.image_pairs is None:
             self.create_image_pairs()
@@ -89,16 +102,12 @@ class MRImagePreprocessor:
 
 
 # 示例用法
-data_with_artifact_paths = ['../data1/nii.gz/3_lq.nii.gz',
-                            '../data1/nii.gz/6_lq.nii.gz',
-                            '../data1/nii.gz/7_lq.nii.gz','../data1/nii.gz/23_lq.nii.gz','../data1/nii.gz/25_lq.nii.gz'
-                            ]
-data_without_artifact_paths = ['../data1/nii.gz/3__hq.nii.gz',
-                            '../data1/nii.gz/6__hq.nii.gz',
-                            '../data1/nii.gz/7__hq.nii.gz','../data1/nii.gz/23__hq.nii.gz','../data1/nii.gz/25__hq.nii.gz'
-                            ]
-
-preprocessor = MRImagePreprocessor(data_with_artifact_paths, data_without_artifact_paths)
-preprocessor.save_dataset_as_images('D:\Graduation project\MR\data', train_test_split=0.9)
-dataset = preprocessor.get_dataset()
-print(dataset.shape)
+# data_with_artifact_paths = ['../data1/nii.gz/3_lq.nii.gz','../data1/nii.gz/6_lq.nii.gz',
+#                             ]
+# data_without_artifact_paths = ['../data1/nii.gz/3__hq.nii.gz','../data1/nii.gz/6__hq.nii.gz',
+#                             ]
+#
+# preprocessor = MRImagePreprocessor(data_with_artifact_paths, data_without_artifact_paths)
+# preprocessor.save_dataset_as_images('../data1/png', train_test_split=1)
+# dataset = preprocessor.get_dataset()
+# print(dataset.shape)

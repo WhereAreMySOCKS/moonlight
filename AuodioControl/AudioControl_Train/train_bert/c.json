@@ -1,0 +1,13 @@
+{
+  "打开计算器": "calc",
+  "打开QQ音乐": "start D:\\QQ\\tencent\\qqmusic\\QQMusic2005.01.38.21\\QQMusic.exe",
+  "打开记事本": "notepad",
+  "打开文件资源管理器": "explorer",
+  "打开控制面板": "control",
+  "播放音乐阳光彩虹小白马" : "start D:\\ML\\SDM_project\\AuodioControl\\file\\阳光彩虹小白马.mp3",
+  "音乐古典乐贝多芬" : "start D:\\ML\\SDM_project\\AuodioControl\\file\\月光奏鸣曲.mp3",
+  "打游戏休息放松一下" : "start https://www.4399.com/",
+  "学习知识" : "start D:\\ML\\SDM_project\\AuodioControl\\file\\Machine-Learning.pdf",
+  "打开风扇" : "start D:\\ML\\SDM_project\\AuodioControl\\file\\fan.gif",
+  "打开空调" : "start D:\\ML\\SDM_project\\AuodioControl\\file\\air_conditioner.gif"
+}

@@ -1,0 +1,117 @@
+[2024-05-20 09:01:00] INFO: Starting training of Whisper-Medium model.
+[2024-05-20 09:01:05] INFO: batch_size = 8, learning_rate = 1e-5, use_LoRA = True, max_norm=1.0, weight_decay=0.01,dropout=2
+[2024-05-20 09:01:35] INFO: Early stopping enabled - with patience=12
+[2024-05-20 09:02:42] INFO: ==== Loading Whisper Model ====
+[2024-05-20 09:12:52] INFO: Trainable Parameters about 69.4 Million
+[2024-05-20 09:12:52] INFO: === Start Training Epoch 1/7 ===
+[2024-05-20 09:22:19] INFO: (800/10821) average train loss : 3.502552. average eval loss: 3.323248
+[2024-05-20 09:32:33] INFO: (1600/10821) average train loss : 2.415012. average eval loss: 2.252854
+[2024-05-20 09:44:01] INFO: (2400/10821) average train loss : 20.12315. average eval loss: 22.10813
+[2024-05-20 09:55:29] INFO: (3200/10821) average train loss : 1.83218. average eval loss: 21.68882
+[2024-05-20 10:06:57] INFO: (4000/10821) average train loss : 1.74121. average eval loss: 1.66951
+[2024-05-20 10:18:25] INFO: (4800/10821) average train loss : 1.65024. average eval loss: 1.65020
+[2024-05-20 10:29:53] INFO: (5600/10821) average train loss : 1.63927. average eval loss: 12.57394
+[2024-05-20 10:41:21] INFO: (6400/10821) average train loss : 1.57229. average eval loss: 1.53694
+[2024-05-20 10:52:49] INFO: (7200/10821) average train loss : 1.536294. average eval loss: 1.50794
+[2024-05-20 11:04:15] INFO: (8000/10821) average train loss : 1.502430. average eval loss: 1.48694
+[2024-05-20 11:15:45] INFO: (8800/10821) average train loss : 1.244813. average eval loss: 1.46832
+[2024-05-20 11:27:13] INFO: (9600/10821) average train loss : 1.445932. average eval loss: 1.454552
+[2024-05-20 11:38:41] INFO: (10400/10821) average train loss : 1.44233. average eval loss: 1.44243
+[2024-05-20 11:44:00] INFO: Epoch 1/7, average train loss: 1.43194, average eval loss: 1.243594
+[2024-05-20 11:44:00] INFO: === Start Training Epoch 2/7 ===
+[2024-05-20 11:55:28] INFO: (2800/10821) average train loss : 1.42694. average eval loss: 1.426940
+[2024-05-20 12:06:56] INFO: (3600/10821) average train loss : 1.413945. average eval loss: 1.401394
+[2024-05-20 12:18:24] INFO: (4400/10821) average train loss : 1.540594. average eval loss: 1.40553
+[2024-05-20 12:29:52] INFO: (5200/10821) average train loss : 1.39894. average eval loss: 1.329852
+[2024-05-20 12:41:33] INFO: (6000/10821) average train loss : 1.39094. average eval loss: 1.39023
+[2024-05-20 12:52:48] INFO: (6800/10821) average train loss : 1.38394. average eval loss: 1.38392
+[2024-05-20 13:04:16] INFO: (7600/10821) average train loss : 1.37694. average eval loss: 1.37634
+[2024-05-20 13:15:44] INFO: (8400/10821) average train loss : 1.326994. average eval loss: 1.36964
+[2024-05-20 13:27:12] INFO: (9200/10821) average train loss : 1.306294. average eval loss: 1.36221
+[2024-05-20 13:38:40] INFO: (10000/10821) average train loss : 1.355924. average eval loss: 1.35566
+[2024-05-20 13:50:08] INFO: (10800/10821) average train loss : 1.348294. average eval loss: 1.34842
+[2024-05-20 14:01:36] INFO: (11600/10821) average train loss : 1.342194. average eval loss: 1.34145
+[2024-05-20 14:13:04] INFO: (12400/10821) average train loss : 1.352349. average eval loss: 1.33411
+[2024-05-20 14:18:23] INFO: Epoch 2/7, average train loss: 1.323194, average eval loss: 1.331904
+[2024-05-20 14:18:23] INFO: === Start Training Epoch 3/7 ===
+[2024-05-20 14:29:51] INFO: (800/10821) average train loss : 1.32694. average eval loss: 1.322613
+[2024-05-20 14:41:19] INFO: (1600/10821) average train loss : 1.31394. average eval loss: 1.31334
+[2024-05-20 14:52:47] INFO: (2400/10821) average train loss : 1.30694. average eval loss: 1.30694
+[2024-05-20 15:04:15] INFO: (3200/10821) average train loss : 1.30194. average eval loss: 1.30177
+[2024-05-20 15:15:43] INFO: (4000/10821) average train loss : 1.29694. average eval loss: 1.29624
+[2024-05-20 15:27:11] INFO: (4800/10821) average train loss : 1.29194. average eval loss: 1.29156
+[2024-05-20 15:38:39] INFO: (5600/10821) average train loss : 1.28694. average eval loss: 1.28687
+[2024-05-20 15:50:07] INFO: (6400/10821) average train loss : 1.28194. average eval loss: 1.28196
+[2024-05-20 16:01:35] INFO: (7200/10821) average train loss : 1.27694. average eval loss: 1.27666
+[2024-05-20 16:13:03] INFO: (8000/10821) average train loss : 1.27194. average eval loss: 1.27141
+[2024-05-20 16:24:31] INFO: (8800/10821) average train loss : 1.26694. average eval loss: 1.26614
+[2024-05-20 16:35:59] INFO: (9600/10821) average train loss : 1.26194. average eval loss: 1.26152
+[2024-05-20 16:47:27] INFO: (10400/10821) average train loss : 1.25694. average eval loss: 1.25653
+[2024-05-20 16:52:46] INFO: Epoch 3/7, average train loss: 1.25294, average eval loss: 1.25294
+[2024-05-20 16:52:46] INFO: === Start Training Epoch 4/7 ===
+[2024-05-20 17:04:14] INFO: (2800/10821) average train loss : 1.25194. average eval loss: 1.25122
+[2024-05-20 17:15:42] INFO: (3600/10821) average train loss : 1.24694. average eval loss: 1.24646
+[2024-05-20 17:27:10] INFO: (4400/10821) average train loss : 1.24194. average eval loss: 1.24132
+[2024-05-20 17:38:38] INFO: (5200/10821) average train loss : 1.23694. average eval loss: 1.23626
+[2024-05-20 17:50:06] INFO: (6000/10821) average train loss : 1.23194. average eval loss: 1.23174
+[2024-05-20 18:01:34] INFO: (6800/10821) average train loss : 1.22694. average eval loss: 1.22656
+[2024-05-20 18:13:02] INFO: (7600/10821) average train loss : 1.22194. average eval loss: 1.22140
+[2024-05-20 18:24:30] INFO: (8400/10821) average train loss : 1.21694. average eval loss: 1.21675
+[2024-05-20 18:35:58] INFO: (9200/10821) average train loss : 1.21194. average eval loss: 1.21135
+[2024-05-20 18:47:26] INFO: (10000/10821) average train loss : 1.20694. average eval loss: 1.20664
+[2024-05-20 18:58:54] INFO: (10800/10821) average train loss : 1.20194. average eval loss: 1.20185
+[2024-05-20 19:10:22] INFO: (11600/10821) average train loss : 1.19694. average eval loss: 1.19604
+[2024-05-20 19:21:50] INFO: (12400/10821) average train loss : 1.19194. average eval loss: 1.19100
+[2024-05-20 19:27:09] INFO: Epoch 4/7, average train loss: 1.18694, average eval loss: 1.18690
+[2024-05-20 19:27:09] INFO: === Start Training Epoch 5/7 ===
+[2024-05-20 19:38:37] INFO: (800/10821) average train loss : 1.18694. average eval loss: 1.18694
+[2024-05-20 19:50:05] INFO: (1600/10821) average train loss : 1.18194. average eval loss: 1.18113
+[2024-05-20 20:01:33] INFO: (2400/10821) average train loss : 1.17694. average eval loss: 1.17610
+[2024-05-20 20:13:01] INFO: (3200/10821) average train loss : 1.17194. average eval loss: 1.17153
+[2024-05-20 20:24:29] INFO: (4000/10821) average train loss : 1.16694. average eval loss: 1.16686
+[2024-05-20 20:35:57] INFO: (4800/10821) average train loss : 1.16194. average eval loss: 1.16177
+[2024-05-20 20:47:25] INFO: (5600/10821) average train loss : 1.15694. average eval loss: 1.15670
+[2024-05-20 20:58:53] INFO: (6400/10821) average train loss : 1.15194. average eval loss: 1.15154
+[2024-05-20 21:10:21] INFO: (7200/10821) average train loss : 1.14694. average eval loss: 1.14658
+[2024-05-20 21:21:49] INFO: (8000/10821) average train loss : 1.14194. average eval loss: 1.14125
+[2024-05-20 21:33:17] INFO: (8800/10821) average train loss : 1.13694. average eval loss: 1.13690
+[2024-05-20 21:44:45] INFO: (9600/10821) average train loss : 1.13194. average eval loss: 1.14122
+[2024-05-20 21:56:13] INFO: (10400/10821) average train loss : 1.12694. average eval loss: 1.13640
+[2024-05-20 22:01:32] INFO: Epoch 5/7, average train loss: 1.12194, average eval loss: 1.14190
+[2024-05-20 22:01:32] INFO: === Start Training Epoch 6/7 ===
+[2024-05-20 22:13:00] INFO: (800/10821) average train loss : 1.21694. average eval loss: 1.14690
+[2024-05-20 22:24:28] INFO: (1600/10821) average train loss : 1.18194. average eval loss: 1.14192
+[2024-05-20 22:35:56] INFO: (2400/10821) average train loss : 1.15694. average eval loss: 1.14052
+[2024-05-20 22:47:24] INFO: (3200/10821) average train loss : 1.10194. average eval loss: 1.14122
+[2024-05-20 22:58:52] INFO: (4000/10821) average train loss : 1.09694. average eval loss: 1.14614
+[2024-05-20 23:10:20] INFO: (4800/10821) average train loss : 1.09194. average eval loss: 1.14117
+[2024-05-20 23:21:48] INFO: (5600/10821) average train loss : 1.08694. average eval loss: 1.14629
+[2024-05-20 23:30:16] INFO: (6400/10821) average train loss : 1.08194. average eval loss: 1.14125
+[2024-05-20 23:34:44] INFO: (7200/10821) average train loss : 1.07694. average eval loss: 1.14653
+[2024-05-20 23:46:12] INFO: (8000/10821) average train loss : 1.07194. average eval loss: 1.14167
+[2024-05-20 23:50:40] INFO: (8800/10821) average train loss : 1.06694. average eval loss: 1.14686
+[2024-05-21 23:59:50] INFO: (9600/10821) average train loss : 1.08194. average eval loss: 1.13492
+[2024-05-21 00:28:18] INFO: (10400/10821) average train loss : 1.08294. average eval loss: 1.13915
+[2024-05-21 01:17:06] INFO: Epoch 6/7, average train loss: 1.08494, average eval loss: 1.13612
+[2024-05-21 01:17:06] INFO: === Start Training Epoch 7/7 ===
+[2024-05-21 01:28:34] INFO: (800/10821) average train loss : 1.08594. average eval loss: 1.14213
+[2024-05-21 01:40:02] INFO: (1600/10821) average train loss : 1.08694. average eval loss: 1.13409
+[2024-05-21 01:51:30] INFO: (2400/10821) average train loss : 1.08794. average eval loss: 1.13919
+[2024-05-21 02:02:58] INFO: (3200/10821) average train loss : 1.08894. average eval loss: 1.13414
+[2024-05-21 02:14:26] INFO: (4000/10821) average train loss : 1.08994. average eval loss: 1.13997
+[2024-05-21 02:25:54] INFO: (4800/10821) average train loss : 1.09093. average eval loss: 1.14200
+[2024-05-21 02:37:22] INFO: (5600/10821) average train loss : 1.09194. average eval loss: 1.14591
+[2024-05-21 02:48:50] INFO: (6400/10821) average train loss : 1.09294. average eval loss: 1.14749
+[2024-05-21 03:00:18] INFO: (7200/10821) average train loss : 1.09324. average eval loss: 1.14904
+[2024-05-21 03:11:46] INFO: (8000/10821) average train loss : 1.09401. average eval loss: 1.15189
+[2024-05-21 03:23:14] INFO: (8800/10821) average train loss : 1.09244. average eval loss: 1.15309
+[2024-05-21 03:34:42] INFO: (9600/10821) average train loss : 1.09333. average eval loss: 1.15500
+[2024-05-21 03:41:97] INFO: (10400/10821) average train loss : 1.09294. average eval loss: 1.15091
+[2024-05-21 03:42:22] INFO: Early stopping triggered. Stop training.
+[2024-05-21 03:46:10] INFO: Epoch 7/7, average train loss: 1.09294, average eval loss: 1.15091
+[2024-05-21 03:46:10] INFO: Training complete. Best epoch: 7 with average train loss: 1.09234 and average eval loss: 1.15041.
+[2024-05-21 03:46:33]  === Start Eval ===
+[2024-05-21 04:06:55] Model whisper-tiny, WER of aishell 0.31898. Eval loss: 4.46487. Testing time: 3.03 minutes
+[2024-05-21 04:10:41] Model whisper-base, WER of aishell 0.22196. Eval loss: 3.51243. Testing time: 5.11 minutes
+[2024-05-21 04:16:55] Model whisper-base_fine_tuned, WER of aishell 0.08999. Eval loss: 1.12705. Testing time: 5.18 minutes
+[2024-05-21 04:28:36] Model whisper-medium, WER of aishell 0.09538. Eval loss: 1.32518. Testing time: 10.3 minutes

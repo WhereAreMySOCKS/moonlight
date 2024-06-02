@@ -13,7 +13,6 @@ from model.unet_model import UNet
 from model.unext_model import UNext
 from model.archs import SwinUNet
 from model import config
-from model import archs
 from model.config import get_config
 from early_stop import EarlyStopping
 from utils.dataset import Train_load,val_load
